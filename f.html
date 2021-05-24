@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;;
+      }
+      video{
+        width: 100%;
+        height:100%;
+        position: absolute;
+        object-fit: cover;
+        transition: all .5s linear;
+        z-index: -10;
+      }
+      .yvideo{
+        opacity: 1;
+}
+.yvideo1{
+  opacity: 0;
+}
+.yvideo2{
+  opacity: 0;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video autoplay muted id="myvideo" class="yvideo">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <video muted id="myvideo1" class="yvideo1">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+      <video muted id="myvideo2" class="yvideo2">
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <script type="text/javascript">
+      var video1=document.getElementById('myvideo');
+      var video2=document.getElementById('myvideo1');
+      var video3=document.getElementById('myvideo2');
+  
+      video1.onended=function(){
+        video2.play();
+        video1.style.opacity=0;
+        video2.style.opacity=1;
+      }
+      video2.onended=function(){
+        video3.play();
+        video2.style.opacity=0;
+        video3.style.opacity=1;
+      }
+      video3.onended=function(){
+        video1.play();
+        video3.style.opacity=0;
+        video1.style.opacity=1;
+      }
+    </script>
+
+  </body>
+</html>

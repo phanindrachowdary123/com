@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<Link rel="stylesheet" href="examstyle.css">
+	<meta name="viewport" content="width=device-width,  inital-scale=1.0">
+	<title>Exams site</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	 <section class="header e">
+		 <!-- MENU BAR SYMBOL-->
+		 <input type="checkbox" id="check">
+		 <label for="check">
+			 <i class="fas fa-bars" id="btn"></i>
+			 <i class="fas fa-times" id="cancel"></i>
+		 </label>
+		 <!-- INSIDE MENU BAR -->
+		 <div class="sidebar">
+			 <header>EXAM</header>
+			 <ul>
+				 <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+				 <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+				 <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+				 <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+				 <li><a href="#"><i class="fas fa-lock"></i>Login</a></li>
+			 </ul>
+		 </div>
+		 <div class="sidebar">
+			 <header>EXAM</header>
+			 <ul>
+				 <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+				 <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+				 <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+				 <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+				 <li><a href="#"><i class="fas fa-lock"></i>Login</a></li>
+			 </ul>
+		 </div>
+		 <!--                                    -->
+		 <!-- NAVAGATION BAR -->
+		<nav>
+			<div class="nav-links" id="navLinks">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="nav-links" id="navLinks">
+				<ul>
+					<li><a href="#"><i class="fas fa-home"></i></a></li>
+					<li><a href="#"><i class="fas fa-question-circle"></i></a></li>
+					<li><a href="#"><i class="fas fa-user"></i></a></li>
+					<li><a href="#"><i class="fas fa-phone"></i></a></li>
+					<li><a href="#"><i class="fas fa-lock"></i></a></li>
+					<li class="login"><a href="login.html" target="_blank">SIGN IN</a></li>
+					<li class="login"><a href="signuppage.html" target="_blank">SIGN UP</a></li>
+				</ul>
+
+			</div>
+		</nav>
+</section>
+<section class="ex">
+    <div class="container">
+		<video autoplay muted id="myvideo" class="yvideo">
+		  <source src="nvideo1.mp4" type="video/mp4">
+		</video>
+		<video muted id="myvideo1" class="yvideo1">
+		  <source src="nvideo2.mp4" type="video/mp4">
+		</video>
+		<video muted id="myvideo2" class="yvideo2">
+		  <source src="nvideo3.mp4" type="video/mp4">
+		</video>
+		<video muted id="myvideo3" class="yvideo3">
+			<source src="nvideo4.mp4" type="video/mp4">
+		  </video>
+	  </div>
+
+
+		<div class="welcome">
+			<div class="wel">
+				<p id="text">WELCOME TO MY WEBSITE</p>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		var video1=document.getElementById('myvideo');
+		var video2=document.getElementById('myvideo1');
+		var video3=document.getElementById('myvideo2');
+		var video4=document.getElementById('myvideo3');
+
+		video1.onended=function(){
+			video2.play();
+			video1.style.opacity=0;
+			video2.style.opacity=1;
+		}
+		video2.onended=function(){
+			video3.play();
+			video2.style.opacity=0;
+			video3.style.opacity=1;
+		}
+		video3.onended=function(){
+			video4.play();
+			video3.style.opacity=0;
+			video4.style.opacity=1;
+		}
+		video4.onended=function(){
+			video1.play();
+			video4.style.opacity=0;
+			video1.style.opacity=1;
+		}
+	</script>
+</body>
+</html>
